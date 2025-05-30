@@ -5,6 +5,8 @@ import { X, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, PanInfo } from "framer-motion"
 import axios from "axios"
+//navifation
+import { useRouter } from "next/navigation"
 
 interface Clothing {
   id: string
@@ -15,6 +17,9 @@ interface Clothing {
 }
 
 export default function Component() {
+
+  const router = useRouter()
+
   const [clothes, setClothes] = useState<Clothing[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [approvedIds, setApprovedIds] = useState<string[]>([])
@@ -156,21 +161,7 @@ export default function Component() {
     )
   }
 
-  if (isFinished) {
-    return (
-      <div className="min-h-screen bg-[#ffffff] flex flex-col items-center justify-center p-6 max-w-md mx-auto">
-        <div className="text-center">
-          <h1 className="text-[#000000] text-3xl font-bold mb-4">Descoberta concluída! 🎉</h1>
-          <p className="text-[#a1a1a1] text-base mb-4">
-            Você aprovou {approvedIds.length} de {clothes.length} roupas
-          </p>
-          <Button onClick={resetDiscovery} className="bg-[#b9ff25] hover:bg-[#a8e622] text-black">
-            Descobrir novamente
-          </Button>
-        </div>
-      </div>
-    )
-  }
+  if (isFinished) router.push('/images-adding') 
 
   if (clothes.length === 0) {
     return (
