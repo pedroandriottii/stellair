@@ -107,19 +107,14 @@ export default function Component() {
       setCurrentIndex(currentIndex + 1)
     } else {
       // Terminou todas as 10 roupas
-      setIsFinished(true)
       sendApprovedIds()
+      setIsFinished(true)
     }
   }
 
   const sendApprovedIds = async () => {
     try {
-      console.log('IDs aprovados:', approvedIds)
-      // Aqui você pode fazer o POST para sua API com os IDs aprovados
-      // const response = await axios.post(`${API_URL}/approved-clothes`, {
-      //   approvedIds: approvedIds
-      // })
-      // console.log('Resposta da API:', response.data)
+      await axios.post(`${API_URL}/clothes`, { ids: approvedIds })
     } catch (err) {
       if (axios.isAxiosError(err)) {
         console.error('Erro ao enviar IDs aprovados:', err.response?.data || err.message)

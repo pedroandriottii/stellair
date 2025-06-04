@@ -4,12 +4,14 @@ import type React from "react"
 import { useState, useRef, useEffect } from "react"
 import { Plus, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export default function AdicionarImagens() {
   const [imagens, setImagens] = useState<{ file: File; url: string }[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [uploadStatus, setUploadStatus] = useState<{ success: boolean; message: string } | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+  const router = useRouter()
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -63,6 +65,8 @@ export default function AdicionarImagens() {
       })
     } finally {
       setIsLoading(false)
+      //redirect home
+      router.push('/home') 
     }
   }
 
