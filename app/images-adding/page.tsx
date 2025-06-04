@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react"
 import { Plus, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 export default function AdicionarImagens() {
   const [imagens, setImagens] = useState<{ file: File; url: string }[]>([])
@@ -158,9 +159,11 @@ export default function AdicionarImagens() {
         >
           {isLoading ? "Enviando..." : "Concluir"}
         </Button>
-        <Button variant="outline" className="w-full">
-          Pular
-        </Button>
+        <Link href="/home">
+          <Button variant="outline" className="w-full">
+            Pular
+          </Button>
+        </Link>
       </div>
     </div>
   )

@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Look, profileLooks } from "@/data/looks";
+import Link from "next/link";
 
 type ProfileResponse = {
   cluster_id: number;
@@ -170,15 +171,17 @@ export default function HomePage() {
 
         {/* ----- Banner “Refine suas escolhas!” ----- */}
         <section className="mt-8">
-          <div className="bg-[#1C1C1C] text-white rounded-md p-4 flex items-center space-x-4">
-            <Sparkles className="h-8 w-8 text-[#B9FF25]" />
-            <div>
-              <h3 className="font-semibold text-xs">Refine suas escolhas!</h3>
-              <p className="text-xs text-gray-300">
-                Nos ajude a melhorar nossas sugestões de looks para você :)
-              </p>
+          <Link href="/style-discovery">
+            <div className="bg-[#1C1C1C] text-white rounded-md p-4 flex items-center space-x-4">
+              <Sparkles className="h-8 w-8 text-[#B9FF25]" />
+              <div>
+                <h3 className="font-semibold text-xs">Refine suas escolhas!</h3>
+                <p className="text-xs text-gray-300">
+                  Nos ajude a melhorar nossas sugestões de looks para você :)
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </section>
       </div>
 
