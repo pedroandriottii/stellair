@@ -10,19 +10,19 @@ export const profileLooks: Record<string, Look[]> = {
       title: "Balada Neon",
       description:
         "Vestido com recortes contrastantes e acessórios fluo para brilhar na pista.",
-      imageUrl: "/images/colorista-vibrante/balada-neon.jpg",
+      imageUrl: "/public/images/colorista-vibrante/balada-neon.jpeg",
     },
     {
       title: "Piquenique Pop",
       description:
         "Conjunto estampado em tons vibrantes e tênis colorido para um look divertido.",
-      imageUrl: "/images/colorista-vibrante/piquenique-pop.jpg",
+      imageUrl: "/public/images/colorista-vibrante/piquenique.jpeg",
     },
     {
       title: "Arte Urbana",
       description:
         "Jaqueta tie-dye, calça colorida e tênis branco como tela para tinta neon.",
-      imageUrl: "/images/colorista-vibrante/arte-urbana.jpg",
+      imageUrl: "/public/images/colorista-vibrante/arte-urbana.jpeg",
     },
   ],
   "Versátil Minimalista": [
@@ -50,19 +50,19 @@ export const profileLooks: Record<string, Look[]> = {
       title: "Domingo Cozy",
       description:
         "Moletom oversized, legging e meias fofas para um dia preguiçoso em casa.",
-      imageUrl: "/images/casual-confortavel/domingo-cozy.jpg",
+      imageUrl: "/images/casual-confortavel/domingo-cozy.jpeg",
     },
     {
       title: "Passeio Lazer",
       description:
         "Camiseta soltinha, shorts de moletom e tênis slip-on para máxima liberdade.",
-      imageUrl: "/images/casual-confortavel/passeio-lazer.jpg",
+      imageUrl: "/images/casual-confortavel/passeio-lazer.jpeg",
     },
     {
       title: "Mercado Style",
       description:
         "Hoodie unissex, calça cargo leve e tênis confortável para errar recados.",
-      imageUrl: "/images/casual-confortavel/mercado-style.jpg",
+      imageUrl: "/images/casual-confortavel/mercado-style.jpeg",
     },
   ],
   "Profissional Moderno": [

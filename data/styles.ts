@@ -1,97 +1,125 @@
+import React from "react";
+import type { LucideIcon } from "lucide-react";
+import {
+  Zap,
+  Palette,
+  Droplet,
+  Contrast,
+  Circle,
+  Layers,
+  Coffee,
+  Blend,
+  Home,
+  Shirt,
+  Activity,
+  Briefcase,
+  Cpu,
+  TrendingUp,
+  Award,
+  Globe,
+  Feather,
+  Compass,
+  Star,
+} from "lucide-react";
+
 export type Style = {
   name: string;
-  imageUrl: string;
+  icon: LucideIcon;
 };
 
 export const profileStyles: Record<string, Style[]> = {
   "Colorista Vibrante": [
     {
       name: "Neon Pop",
-      imageUrl: "/images/colorista-vibrante/neon-pop.jpg",
+      icon: Zap,
     },
     {
       name: "Mix Cores Primárias",
-      imageUrl: "/images/colorista-vibrante/mix-cores-primarias.jpg",
+      icon: Palette,
     },
     {
       name: "Estampa Fluorescente",
-      imageUrl: "/images/colorista-vibrante/estampa-fluorescente.jpg",
+      icon: Droplet,
     },
     {
       name: "Contrast Sexy",
-      imageUrl: "/images/colorista-vibrante/contrast-sexy.jpg",
+      icon: Contrast,
     },
   ],
+
   "Versátil Minimalista": [
     {
       name: "Monocromático Clean",
-      imageUrl: "/images/versatil-minimalista/monocromatico-clean.jpg",
+      icon: Circle,
     },
     {
       name: "Sobreposição Neutra",
-      imageUrl: "/images/versatil-minimalista/sobreposicao-neutra.jpg",
+      icon: Layers,
     },
     {
       name: "Casual Premium",
-      imageUrl: "/images/versatil-minimalista/casual-premium.jpg",
+      icon: Coffee,
     },
     {
       name: "Tom Sobre Tom",
-      imageUrl: "/images/versatil-minimalista/tom-sobre-tom.jpg",
+      icon: Blend,
     },
   ],
+
   "Casual Confortável": [
     {
       name: "Moletom Cozy",
-      imageUrl: "/images/casual-confortavel/moletom-cozy.jpg",
+      icon: Home,
     },
     {
       name: "T-shirt Relax",
-      imageUrl: "/images/casual-confortavel/tshirt-relax.jpg",
+      icon: Shirt,
     },
     {
       name: "Jeans Stretch",
-      imageUrl: "/images/casual-confortavel/jeans-stretch.jpg",
+      icon: Zap,
     },
     {
       name: "Athleisure Urbano",
-      imageUrl: "/images/casual-confortavel/athleisure-urbano.jpg",
+      icon: Activity,
     },
   ],
+
   "Profissional Moderno": [
     {
       name: "Blazer Slim Fit",
-      imageUrl: "/images/profissional-moderno/blazer-slim-fit.jpg",
+      icon: Briefcase,
     },
     {
       name: "Camisa Tech Fabric",
-      imageUrl: "/images/profissional-moderno/camisa-tech-fabric.jpg",
+      icon: Cpu,
     },
     {
       name: "Calça Alfaiataria Clean",
-      imageUrl: "/images/profissional-moderno/calca-alfaiataria-clean.jpg",
+      icon: TrendingUp,
     },
     {
       name: "Sapato Brogue Minimal",
-      imageUrl: "/images/profissional-moderno/sapato-brogue-minimal.jpg",
+      icon: Award,
     },
   ],
+
   "Aventureiro Fashion": [
     {
       name: "Jaqueta Camuflada",
-      imageUrl: "/images/aventureiro-fashion/jaqueta-camuflada.jpg",
+      icon: Globe,
     },
     {
       name: "Estampa Tribal",
-      imageUrl: "/images/aventureiro-fashion/estampa-tribal.jpg",
+      icon: Feather,
     },
     {
       name: "Botas Explorer",
-      imageUrl: "/images/aventureiro-fashion/botas-explorer.jpg",
+      icon: Compass,
     },
     {
       name: "Acessórios Étnicos",
-      imageUrl: "/images/aventureiro-fashion/acessorios-etnicos.jpg",
+      icon: Star,
     },
   ],
 };

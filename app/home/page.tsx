@@ -52,15 +52,14 @@ export default function HomePage() {
     ? profileLooks[profile.profile_name] ?? []
     : [];
 
-
   return (
     <div className="flex flex-col min-h-screen bg-white pb-16">
       {/* ================= HEADER ================= */}
       <div className="bg-[#1C1C1C] text-white rounded-br-[80px] px-6 py-8 pt-12">
         <h1 className="text-3xl font-bold text-[#B9FF25]">Olá!</h1>
 
-        {/* Mostrar o perfil retornado (profile_name) ou mensagens de loading/erro
-        {!loadingProfile && profile && (
+        {/* Mostrar o perfil retornado (profile_name) ou mensagens de loading/erro */}
+        {/* {!loadingProfile && profile && (
           <p className="mt-1 text-lg">Seu perfil: {profile.profile_name}</p>
         )}
         {!loadingProfile && errorProfile && (
@@ -79,27 +78,28 @@ export default function HomePage() {
       <div className="flex-1 mt-5 px-4 py-6">
         {/* ----- Seção “Estilos que você pode gostar” ----- */}
         <section>
-          <h2 className="text-sm text-[#525252] font-medium mb-4">Estilos que você pode gostar</h2>
+          <h2 className="text-sm text-[#525252] font-medium mb-4">
+            Estilos que você pode gostar
+          </h2>
           <div className="flex space-x-4 overflow-x-auto pb-2">
             {estilos.length > 0 ? (
-              estilos.map((estilo) => (
-                <div
-                  key={estilo.name}
-                  className="flex flex-col items-center flex-shrink-0"
-                >
-                  {/* Imagem do estilo em círculo */}
-                  <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-200">
-                    <img
-                      src={estilo.imageUrl}
-                      alt={estilo.name}
-                      className="h-full w-full object-cover"
-                    />
+              estilos.map((estilo) => {
+                const IconComponent = estilo.icon;
+                return (
+                  <div
+                    key={estilo.name}
+                    className="flex flex-col items-center flex-shrink-0"
+                  >
+                    {/* Ícone do estilo em círculo */}
+                    <div className="h-16 w-16 rounded-full bg-[#1C1C1CBF] flex items-center justify-center">
+                      <IconComponent className="h-8 w-8 text-[#B9FF25]" />
+                    </div>
+                    <span className="mt-2 text-xs text-[#525252]">
+                      {estilo.name}
+                    </span>
                   </div>
-                  <span className="mt-2 text-xs text-[#525252]">
-                    {estilo.name}
-                  </span>
-                </div>
-              ))
+                );
+              })
             ) : (
               <p className="text-sm text-gray-500">
                 {loadingProfile
@@ -167,7 +167,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
 
         {/* ----- Banner “Refine suas escolhas!” ----- */}
         <section className="mt-8">

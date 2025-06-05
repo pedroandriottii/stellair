@@ -19,6 +19,8 @@ export default function ChatInterface({ initialQuery, profile }: ChatInterfacePr
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [expandedLook, setExpandedLook] = useState<any>(null)
 
+  const initialFetchedRef = useRef(false)
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }
@@ -28,7 +30,8 @@ export default function ChatInterface({ initialQuery, profile }: ChatInterfacePr
   }, [messages])
 
   useEffect(() => {
-    if (initialQuery) {
+    if (initialQuery && !initialFetchedRef.current) {
+      initialFetchedRef.current = true
       handleInitialQuery()
     }
   }, [initialQuery])
